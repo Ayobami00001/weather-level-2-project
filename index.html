@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        /* .video-containe{
+            position: fixed;
+            width: 100%;
+            height: 45%;
+            object-fit: cover;
+            z-index: -1;
+        } */
+        
+    </style>
+</head>
+<body>
+    <video class="video-container" autoplay loop muted>
+        <source src="./img/13160971_1920_1080_30fps.mp4" type="video/mp4">
+    </video>
+    <div class="mt-5">
+        <div class="d-flex justify-content-center ">
+            <input id="writting" type="text" class=" form-control only-bottom-border w-50 rounded bg-transparent p-1" placeholder="search weather" autofocus>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+            <button onclick="golive()" class="px-5  py-1 rounded-bottom border border-0 mb-4" style="background: skyblue;">Search</button>
+        </div>
+        <div>    
+            <h1 class=" d-flex justify-content-center  mt-2 p-4" id="large" style="font-size:80px ;">
+                
+            </h1>
+            <p class="d-flex justify-content-center fs-4 mt-2" id="small"></p>
+        </div>
+        <div class="mt-5 p-1 " style="background: rgba(0, 0, 0, 0);">
+            <h3 class="d-flex justify-content-center mb-3" >Weather Details</h3>
+            <div class="container text-center">
+                <div class="row row-cols-3  g-4 fs-4 fw-semibold" style="color: black;">
+                    <div class="col ">Location: <span id="one"></span> </div>
+                    <div class="col">Description: <span id="two"></span></div>
+                    <div class="col">Humidity: <span id="three"></span></div>
+                    <div class="col">Wind: <span id="four"></span></div>
+                    <div class="col">Visibility: <span id="five"></span></div>
+                    <div class="col">Min: <span id="six"></span> </div>
+                    <div class="col">Max: <span id="seven"></span></div>
+                    <div class="col">Feels: <span id="eight"></span></div>
+                    <div class="col">Pressure: <span id="nine"></span></div>
+                </div>
+                </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
